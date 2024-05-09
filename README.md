@@ -50,5 +50,15 @@
 - **Training:** `python train.py --model pointnet_cls_se_bn_deeper`
 - **Testing:** `python test.py --model pointnet_cls_se_bn_deeper --visu`
 
-### Training and Testing on ShapeNetPart Dataset
-- **Training:**  
+### PointNet_SE_BN Model on ShapeNetPart Dataset:
+- **Training:**
+  ```
+  cd part_seg
+  sh download_data.sh
+  python train.py
+  ```
+- **Testing:**
+  ```
+  cd part_seg
+  python test.py
+  ```
