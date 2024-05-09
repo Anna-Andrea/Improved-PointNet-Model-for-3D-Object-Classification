@@ -3,9 +3,9 @@
 ModelNet40 dataset: ../data/modelnet40_ply_hdf5_2048
 
 ShapeNetPart dataset (Please run command): 
-cd part_seg
+  cd part_seg
 
-sh download_data.sh
+  sh download_data.sh
 
 Train results of baseline PointNet: 
 
