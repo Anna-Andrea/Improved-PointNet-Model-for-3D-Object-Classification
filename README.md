@@ -1,74 +1,54 @@
-## Txt files which contain the results for training and evaluation periods.
+# Training and Evaluation Results
 
-ModelNet40 dataset: 
-../data/modelnet40_ply_hdf5_2048
+## Txt Files Containing Training and Evaluation Results
 
-ShapeNetPart dataset (Please run command): 
-cd part_seg
-sh download_data.sh
+- **ModelNet40 Dataset:**  
+  - Path: `../data/modelnet40_ply_hdf5_2048`
 
-Train results of baseline PointNet: 
-log/baseline/log_train.txt
+- **ShapeNetPart Dataset:**  
+  - *Note:* To download the dataset, run the following command:  
+    ```
+    cd part_seg
+    sh download_data.sh
+    ```
 
-Test results of baseline PointNet: 
-dump/baseline/log_test.txt
+- **Baseline PointNet:**  
+  - Training Results: `log/baseline/log_train.txt`  
+  - Test Results: `dump/baseline/log_test.txt`
 
-Train results of PointNet_SE: 
-log/se-block/log_train.txt
+- **PointNet_SE Model:**  
+  - Training Results: `log/se-block/log_train.txt`  
+  - Test Results: `dump/se-block/log_test.txt`
 
-Test results of PointNet_SE: 
-dump/se-block/log_test.txt
+- **PointNet_SE_BN Model:**  
+  - Training Results: `log/bn-layer/log_train.txt`  
+  - Test Results: `dump/bn-layer/log_test.txt`
 
-Train results of PointNet_SE_BN: 
-log/bn-layer/log_train.txt
+- **PointNet_SE_BN_Deeper Model:**  
+  - Training Results: `log/bn-layer/log_train.txt`  
+  - Test Results: `dump/bn-layer/log_test.txt`
 
-Test results of PointNet_SE_BN: 
-dump/bn-layer/log_test.txt
+- **PointNet_SE_BN on ShapeNetPart Dataset:**  
+  - Training Results: `part_seg/train_results/logs/log.txt`  
+  - Test Results: `part_seg/test_results/log.txt`
 
-Train results of PointNet_SE_BN_Deeper: 
-log/bn-layer/log_train.txt
+## Linux Commands for Training and Testing
 
-Test results of PointNet_SE_BN_Deeper: 
-dump/bn-layer/log_test.txt
+### Baseline PointNet
+- **Training:** `python train.py`
+- **Testing:** `python test.py --visu`
 
-Train results of PointNet_SE_BN on ShapeNetPart dataset: 
-part_seg/train_results/logs/log.txt
+### PointNet_SE Model
+- **Training:** `python train.py --model pointnet_cls_se`
+- **Testing:** `python test.py --model pointnet_cls_se --visu`
 
-Test results of PointNet_SE_BN on ShapeNetPart dataset: 
-part_seg/test_results/log.txt
+### PointNet_SE_BN Model
+- **Training:** `python train.py --model pointnet_cls_se_bn`
+- **Testing:** `python test.py --model pointnet_cls_se_bn --visu`
 
+### PointNet_SE_BN_Deeper Model
+- **Training:** `python train.py --model pointnet_cls_se_bn_deeper`
+- **Testing:** `python test.py --model pointnet_cls_se_bn_deeper --visu`
 
-## Linux Command for training and testing different models (Training will cost much more time, while testing is soon)
-
-Training baseline PointNet:
-python train.py
-
-Testing baseline PointNet: 
-python test.py --visu
-
-Training PointNet_SE model:
-python train.py --model pointnet_cls_se
-
-Testinig PointNet_SE model:
-python test.py --model pointnet_cls_se --visu
-
-Training PointNet_SE_BN model:
-python train.py --model pointnet_cls_se_bn
-
-Testinig PointNet_SE_BN model:
-python test.py --model pointnet_cls_se_bn --visu
-
-Training PointNet_SE_BN_Deeper model:
-python train.py --model pointnet_cls_se_bn_deeper
-
-Testinig PointNet_SE_BN_Deeper model:
-python test.py --model pointnet_cls_se_bn_deeper --visu
-
-Training PointNet_SE_BN on ShapeNetPart dataset:
-cd part_seg
-sh download_data.sh
-python train.py
-
-Training PointNet_SE_BN on ShapeNetPart dataset:
-cd part_seg
-python test.py
+### Training and Testing on ShapeNetPart Dataset
+- **Training:**  
