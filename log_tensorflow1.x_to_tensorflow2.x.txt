@@ -1,0 +1,49 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: pointnet/train.py
+--------------------------------------------------------------------------------
+pointnet/train.py:166:28: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'pointnet/train.py'
+ outputting to 'pointnet_tensorflow_v2/pointnet/train.py'
+--------------------------------------------------------------------------------
+
+74:20: INFO: tf.train.exponential_decay requires manual check. To use learning rate decay schedules with TensorFlow 2.0, switch to the schedules in `tf.keras.optimizers.schedules`.
+
+74:20: INFO: Renamed 'tf.train.exponential_decay' to 'tf.compat.v1.train.exponential_decay'
+84:18: INFO: tf.train.exponential_decay requires manual check. To use learning rate decay schedules with TensorFlow 2.0, switch to the schedules in `tf.keras.optimizers.schedules`.
+
+84:18: INFO: Renamed 'tf.train.exponential_decay' to 'tf.compat.v1.train.exponential_decay'
+97:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+104:12: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+104:12: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+109:12: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+109:12: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+111:51: INFO: Changed tf.to_int64 call to tf.cast(..., dtype=tf.int64).
+113:12: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+113:12: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+117:12: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+117:12: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+119:28: INFO: Renamed 'tf.train.MomentumOptimizer' to 'tf.compat.v1.train.MomentumOptimizer'
+121:28: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+125:20: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+128:17: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+132:15: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+136:17: INFO: tf.summary.merge_all requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+136:17: INFO: Renamed 'tf.summary.merge_all' to 'tf.compat.v1.summary.merge_all'
+137:23: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+137:23: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+139:22: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+139:22: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+142:15: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+166:28: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+

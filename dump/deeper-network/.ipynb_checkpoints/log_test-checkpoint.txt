@@ -1,0 +1,3 @@
+Namespace(gpu=0, model='pointnet_cls_se_bn_deeper', batch_size=4, num_point=1024, model_path='log/model.ckpt', dump_dir='dump/baseline', visu=True)
+Model restored.
+----0----

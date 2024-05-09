@@ -1,0 +1,47 @@
+Namespace(gpu=0, model='pointnet_cls_se_bn_deeper', batch_size=4, num_point=1024, model_path='log/model.ckpt', dump_dir='dump/baseline', visu=True)
+Model restored.
+----0----
+----1----
+test mean loss: 0.517022
+test accuracy: 0.884927
+test avg class acc: 0.855355
+  airplane:	1.000
+   bathtub:	0.840
+       bed:	0.950
+     bench:	0.700
+ bookshelf:	0.910
+    bottle:	0.940
+      bowl:	0.900
+       car:	0.990
+     chair:	0.970
+      cone:	0.950
+       cup:	0.700
+   curtain:	0.900
+      desk:	0.826
+      door:	0.900
+   dresser:	0.721
+flower_pot:	0.300
+ glass_box:	0.950
+    guitar:	1.000
+  keyboard:	1.000
+      lamp:	0.950
+    laptop:	1.000
+    mantel:	0.940
+   monitor:	0.950
+night_stand:	0.698
+    person:	0.950
+     piano:	0.870
+     plant:	0.800
+     radio:	0.750
+range_hood:	0.900
+      sink:	0.750
+      sofa:	0.970
+    stairs:	0.750
+     stool:	0.700
+     table:	0.850
+      tent:	0.950
+    toilet:	0.980
+  tv_stand:	0.800
+      vase:	0.810
+  wardrobe:	0.600
+      xbox:	0.800
